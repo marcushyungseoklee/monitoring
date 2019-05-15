@@ -5,6 +5,7 @@ Usage : docker stats
 docker remote api를 직접 개발해 더 자세한 stat 정보를 얻을 수 있음
 
 2. CAdvisor
+Usage: 
 docker stats, remote API 커맨드 라인에서 정보를 얻기에는 유용하지만 그래프 형태로 보기에는 적합하지 않음
 CAdvisor는 docker stat에 의한 정보를 비주얼 하게 제공
 cpu, memory, network, disk-space 리소스를 그래프로 확인 가능
@@ -25,7 +26,6 @@ scout web view에서 모니터링이 되는 걸 확인
 trigger 설정
 plugins set? 때문에 cAdvisor에 비해 도커 정보 이외에도 다른 정보를 가져올 수 있습니다.
 원스탑 모니터링 시스템
-For example if you want a trigger to alert you about issues in your web containers but not about your Jenkins containers Scout will not be able to support that use case. Despite the drawbacks Scout is a significantly more useful tool for monitoring your docker deployments. However this does come at a cost, ten dollars per monitored host. The cost could be a factor if you are running a large deployment with many hosts.
 현재 scout의 하나의 문제점은 cAdvisor처럼 개별 컨테이너의 detail한 정보를 제공하지 않습니다. 하나의 서버에서 여러 종류의 컨테이너를 실행하면 문제의 소지가 될 수 있습니다. 예를들어 alert의 트리거를
 
 4. Promethues
